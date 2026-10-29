@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Gadgets | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling for smooth tab switching and active states */
+    .subtype-link {
+      cursor: pointer;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #6b7280;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .subtype-link.active {
+      color: #0f2b48;
+      font-weight: 800;
+      background-color: #f3f4f6;
+    }
+    .gadget-section {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="Laptops.html" class="nav-item">Laptops</a>
+        <a href="index.html" class="nav-item">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item active">Smart Gadgets</a>
+        <a href="Accesories.html" class="nav-item">Accessories</a>
+        <a href="Reviews.html" class="nav-item">Reviews</a>
+        <a href="Contact.html" class="nav-item">Contacts</a>
+        <a href="About.html" class="nav-item">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="laptops-hero-section">
+    <div class="watermark-bg">GADGETS</div>
+    <h1 class="laptops-title">Smart Gadgets</h1>
+  </section>
+
+  <!-- Sub-category Filter Toolbar -->
+  <div class="filter-toolbar-container">
+    <div class="filter-toolbar">
+      <button class="show-filters-btn">
+        <i class="fas fa-sliders"></i> Show filters
+      </button>
+
+      <div class="category-subtypes">
+        <a href="javascript:void(0);" onclick="switchTab('gaming', this)" class="subtype-link active">
+          <i class="fas fa-gamepad"></i> Gaming
+        </a>
+        <a href="javascript:void(0);" onclick="switchTab('jbl', this)" class="subtype-link">
+          <i class="fas fa-volume-up"></i> JBL Audio
+        </a>
+        <a href="javascript:void(0);" onclick="switchTab('watches', this)" class="subtype-link">
+          <i class="fas fa-stopwatch"></i> Watches
+        </a>
+        <a href="javascript:void(0);" onclick="switchTab('rayban', this)" class="subtype-link">
+          <i class="fas fa-glasses"></i> Ray-Ban Meta
+        </a>
+      </div>
+
+      <div class="sort-dropdown-wrapper">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">Date, new to old</option>
+          <option value="price-low">Price, low to high</option>
+          <option value="price-high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <main class="laptops-main-container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: GAMING & PLAYSTATION (Visible by default) -->
+    <!-- ========================================== -->
+    <section id="gaming" class="gadget-section" style="display: block;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        PlayStation Consoles, Accessories & Games
+      </h2>
+
+      <div class="laptop-cards-grid">
+        <!-- PS5 Slim -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ps5.png" alt="PS5 Slim Console" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(601)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">SONY PLAYSTATION</div>
+            <h3 class="laptop-model">PlayStation 5 Slim Console | 1TB SSD</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦950,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>1TB Storage 4K / 120Hz</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PS5 DualSense Controller -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ps5pad.png" alt="PS5 Controller" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(602)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">SONY PLAYSTATION</div>
+            <h3 class="laptop-model">PS5 DualSense Wireless Controller</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦115,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Wireless Haptic Feedback</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PS5 Travel Bag -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ps5bag.png" alt="PS5 Travel Bag" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(603)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">PLAYSTATION GEAR</div>
+            <h3 class="laptop-model">PS5 Hard Shell Carrying Bag</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦35,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Shockproof Protection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AirPods Max -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Airpodmax.png" alt="Apple AirPods Max" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(604)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">Apple AirPods Max Headphones</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦850,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Spatial Audio & ANC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EA Sports FC 27 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/fc27.png" alt="EA Sports FC 27" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(605)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">EA SPORTS</div>
+            <h3 class="laptop-model">EA Sports FC 27 | PlayStation 5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦95,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EA Sports FC 26 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/FC26.png" alt="EA Sports FC 26" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(606)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">EA SPORTS</div>
+            <h3 class="laptop-model">EA Sports FC 26 | PlayStation 5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦75,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EA Sports FC 25 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Fc25.png" alt="EA Sports FC 25" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(607)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">EA SPORTS</div>
+            <h3 class="laptop-model">EA Sports FC 25 | PlayStation 5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦55,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UFC 5 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ufc5.png" alt="UFC 5" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(608)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">EA SPORTS</div>
+            <h3 class="laptop-model">UFC 5 | PlayStation 5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦65,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- God of War Ragnarök -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Godofwar.png" alt="God of War Ragnarok" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(609)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">PLAYSTATION STUDIOS</div>
+            <h3 class="laptop-model">God of War Ragnarök | PlayStation 5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦50,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COD Modern Warfare 3 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/CODMW3.png" alt="Call of Duty MW3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(610)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">ACTIVISION</div>
+            <h3 class="laptop-model">Call of Duty: Modern Warfare III | PS5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦60,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Last of Us Part I -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Thelastofus.png" alt="The Last of Us Part I" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(611)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">NAUGHTY DOG</div>
+            <h3 class="laptop-model">The Last of Us Part I Remastered | PS5</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦55,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Witcher 3 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Thewitcher.png" alt="The Witcher 3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(612)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">CD PROJEKT RED</div>
+            <h3 class="laptop-model">The Witcher 3: Wild Hunt Complete Edition</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦45,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Physical Disc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 2: JBL SPEAKERS & HEADPHONES (Hidden by default) -->
+    <!-- ========================================== -->
+    <section id="jbl" class="gadget-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        JBL Speakers & Headphones
+      </h2>
+
+      <div class="laptop-cards-grid">
+        <!-- JBL Flip 7 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Flip7.png" alt="JBL Flip 7" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(613)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Flip 7 Portable Bluetooth Speaker</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦180,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>IP67 Waterproof • 12H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Charge 6 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Charge6.png" alt="JBL Charge 6" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(614)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Charge 6 Portable Speaker & Powerbank</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦240,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Powerbank Function • 20H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harman Kardon Studio 9 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/studio9.png" alt="Harman Kardon Onyx Studio 9" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(615)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">HARMAN KARDON / JBL</div>
+            <h3 class="laptop-model">Harman Kardon Onyx Studio 9</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦380,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Dual Sound • Premium Bass</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harman Kardon Studio 8 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Studio8.png" alt="Harman Kardon Onyx Studio 8" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(616)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">HARMAN KARDON / JBL</div>
+            <h3 class="laptop-model">Harman Kardon Onyx Studio 8</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦320,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Self-Tuning • Bluetooth 5.2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harman Kardon Studio 6 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/studio6.png" alt="Harman Kardon Onyx Studio 6" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(617)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">HARMAN KARDON / JBL</div>
+            <h3 class="laptop-model">Harman Kardon Onyx Studio 6</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦260,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>IPX7 Waterproof • 8H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Xtreme 4 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/xtreme4.png" alt="JBL Xtreme 4" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(618)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Xtreme 4 Portable Boombox</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦480,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Massive Bass • 24H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Xtreme 3 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Xtreme3.png" alt="JBL Xtreme 3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(619)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Xtreme 3 Bluetooth Speaker</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦390,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>JBL Pro Sound • Dustproof</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Boombox 4 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/boombox4.png" alt="JBL Boombox 4" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(620)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Boombox 4 High-Output Speaker</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦720,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Monster Bass • 24H+ Playtime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Boombox 3 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/boombox3.png" alt="JBL Boombox 3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(621)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Boombox 3 Portable Speaker</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦610,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>3-Way Speakers • 24H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Tune 720BT -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Tune720.png" alt="JBL Tune 720BT" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(622)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Tune 720BT Wireless Headphones</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦75,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Pure Bass • Up to 76H Battery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- JBL Tune 520BT -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/tune520.png" alt="JBL Tune 520BT" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(623)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">JBL AUDIO</div>
+            <h3 class="laptop-model">JBL Tune 520BT Wireless On-Ear Headphones</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦55,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Pure Bass • 57H Battery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 3: APPLE WATCHES (Hidden by default) -->
+    <!-- ========================================== -->
+    <section id="watches" class="gadget-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Apple Watches & Smart Wearables
+      </h2>
+
+      <div class="laptop-cards-grid">
+        <!-- Apple Watch Ultra 1 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/watchultra.png" alt="Apple Watch Ultra 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(624)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">Apple Watch Ultra 1 | 49mm Titanium</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦650,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Dual GPS • 100m Water Resistance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Watch Series 11 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/series11.png" alt="Apple Watch Series 11" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(625)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">Apple Watch Series 11 | GPS + Cellular</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦580,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>ECG Health Sensors • Always-On</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Watch Series 9 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/series9.png" alt="Apple Watch Series 9" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(626)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">Apple Watch Series 9 | 45mm / 41mm</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦430,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Double Tap Gesture • S9 SiP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Watch Series 8 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Series8.png" alt="Apple Watch Series 8" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(627)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">Apple Watch Series 8 | 45mm / 41mm</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦330,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Temp Sensing • Crash Detection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 4: RAY-BAN META (Hidden by default) -->
+    <!-- ========================================== -->
+    <section id="rayban" class="gadget-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Ray-Ban Meta AI Smart Glasses
+      </h2>
+
+      <div class="laptop-cards-grid">
+        <!-- Ray-Ban Meta Wayfarer -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/raybanwaferer.png" alt="Ray-Ban Meta Wayfarer Smart Glasses" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(628)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">RAY-BAN x META</div>
+            <h3 class="laptop-model">Ray-Ban Meta Wayfarer AI Smart Glasses</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦420,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>12MP Cam • Meta AI & Audio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ray-Ban Meta Skyler -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/raybanskyler.png" alt="Ray-Ban Meta Skyler Smart Glasses" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(629)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">RAY-BAN x META</div>
+            <h3 class="laptop-model">Ray-Ban Meta Skyler AI Smart Glasses</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦450,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>1080p Video • Open-Ear Speakers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="Laptops.html">Laptops</a></li>
+          <li><a href="index.html">Phones</a></li>
+          <li><a href="Desktops.html">Desktops</a></li>
+          <li><a href="SmartGadgets.html">Gadgets</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="Computerparts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="SmartGadgets.html">Apple</a></li>
+          <li><a href="SmartGadgets.html">Sony</a></li>
+          <li><a href="SmartGadgets.html">JBL</a></li>
+          <li><a href="SmartGadgets.html">Ray-Ban</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
+          <li><a href="Refundpolicy.html">Refund Policy</a></li>
+          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="Refundpolicy.html">Refund Policy</a>
+        <a href="Privacypolicy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <!-- Interactive Tab Switching Script -->
+  <script>
+    function switchTab(sectionId, clickedElement) {
+      // 1. Hide all gadget sections
+      const sections = document.querySelectorAll('.gadget-section');
+      sections.forEach(sec => sec.style.display = 'none');
+
+      // 2. Show selected section
+      document.getElementById(sectionId).style.display = 'block';
+
+      // 3. Update tab link styling
+      const links = document.querySelectorAll('.subtype-link');
+      links.forEach(link => link.classList.remove('active'));
+
+      // 4. Mark clicked tab as active
+      clickedElement.classList.add('active');
+    }
+  </script>
+</body>
+</html>

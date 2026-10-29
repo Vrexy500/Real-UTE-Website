@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phones | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="Phones.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="laptops.html" class="nav-item">Laptops</a>
+        <a href="phones.html" class="nav-item active">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
+        <a href="Accesories.html" class="nav-item">Accessories</a>
+        <a href="reviews.html" class="nav-item">Reviews</a>
+        <a href="contact.html" class="nav-item">Contacts</a>
+        <a href="About.html" class="nav-item">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Phones Banner Title -->
+  <section class="laptops-hero-section">
+    <div class="watermark-bg">Mobile</div>
+    <h1 class="laptops-title">Mobile Phones</h1>
+  </section>
+
+  <!-- Filter & Brand Switcher Toolbar -->
+  <div class="filter-toolbar-container">
+    <div class="filter-toolbar">
+      <button class="show-filters-btn">
+        <i class="fas fa-sliders"></i> Show filters
+      </button>
+
+      <!-- Brand Sub-Category Tabs -->
+      <div class="category-subtypes">
+        <a href="Newiphones.html" class="subtype-link active"> New IPhones</a>
+        <a href="usediphones.html" class="subtype-link"><i class="fab fa-apple"></i>Premium Used iPhones</a>
+        <a href="samsung.html" class="subtype-link"><i class="fas fa-mobile-alt"></i> Samsung Galaxy</a>
+      </div>
+
+      <div class="sort-dropdown-wrapper">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">Date, new to old</option>
+          <option value="price-low">Price, low to high</option>
+          <option value="price-high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phones Grid -->
+  <main class="laptops-main-container">
+    <div class="laptop-cards-grid">
+
+      <!-- iPhone 18 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18pro.png" alt="iPhone 18 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(201)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,960,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Black</span>
+            <span class="color-pill">Glacier</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Brand New</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro 256GB Burgundy Special -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18pro_burg.png" alt="iPhone 18 Pro 256GB Burgundy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(202)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro Burgundy Edition | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,980,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Burgundy</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Special Edition</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro 512GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18pro.png" alt="iPhone 18 Pro 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(203)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro | 512GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦2,390,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Burgundy</span>
+            <span class="color-pill">Glacier</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Brand New</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro Max 256GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18promax.png" alt="iPhone 18 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(204)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro Max | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦2,270,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Glacier</span>
+            <span class="color-pill">Black</span>
+            <span class="color-pill">Burgundy</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro Max 512GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18promax_b.png" alt="iPhone 18 Pro Max 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(205)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro Max | 512GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦2,650,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Burgundy</span>
+            <span class="color-pill">Black</span>
+            <span class="color-pill">Glacier</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro Max 1TB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18promax.png" alt="iPhone 18 Pro Max 1TB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(206)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro Max | 1TB Storage</h3>
+          <div class="price-box">
+            <span class="current-price">₦3,320,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Burgundy</span>
+            <span class="color-pill">Black</span>
+            <span class="color-pill">Glacier</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 1TB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 18 Pro Max 2TB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/18promax_b.png" alt="iPhone 18 Pro Max 2TB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(207)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE</div>
+          <h3 class="laptop-model">Apple iPhone 18 Pro Max | 2TB Storage</h3>
+          <div class="price-box">
+            <span class="current-price">₦4,070,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Burgundy</span>
+            <span class="color-pill">Black</span>
+            <span class="color-pill">Glacier</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 2TB Extreme Storage</span>
+            <span><i class="fas fa-mobile"></i> Ultimate Edition</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NON ACTIVE SECTION -->
+
+      <!-- iPhone 17 256GB Non-Active -->
+      <div class="laptop-card">
+      
+        <div class="laptop-img-wrapper">
+          <img src="images/17.png" alt="iPhone 17 256GB">
+          <button class="hover-add-cart-btn" onclick="addToCart(208)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (NON-ACTIVE)</div>
+          <h3 class="laptop-model">Apple iPhone 17 | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,340,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> Certified Factory</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 17 Air 256GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/17air.png" alt="iPhone 17 Air 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(209)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (NON-ACTIVE)</div>
+          <h3 class="laptop-model">Apple iPhone 17 Air | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,280,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Gold</span>
+            <span class="color-pill">Blue</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-feather"></i> Ultra Slim Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!--iphone 17 pro 256gb-->
+   <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/17pro.png" alt="iPhone 17 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(211)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (NON-ACTIVE)</div>
+          <h3 class="laptop-model">Apple iPhone 17 Pro | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,690,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Silver</span>
+            <span class="color-pill">Orange</span>
+            <span class="color-pill">Blue</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- iPhone 17 Pro Max 256GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/17promax.png" alt="iPhone 17 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(211)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (NON-ACTIVE)</div>
+          <h3 class="laptop-model">Apple iPhone 17 Pro Max | 256GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,840,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Silver</span>
+            <span class="color-pill">Orange</span>
+            <span class="color-pill">Blue</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 17 Pro Max 512GB -->
+      <div class="laptop-card">
+        <div class="laptop-img-wrapper">
+          <img src="images/17promax.png" alt="iPhone 17 Pro Max 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(212)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (NON-ACTIVE)</div>
+          <h3 class="laptop-model">Apple iPhone 17 Pro Max | 512GB</h3>
+          <div class="price-box">
+            <span class="current-price">₦2,140,000</span>
+          </div>
+          <div class="phone-color-pills">
+            <span class="color-pill">Silver</span>
+            <span class="color-pill">Orange</span>
+            <span class="color-pill">Blue</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Pro Max</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 16 128GB -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16.png" alt="iPhone 16 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(213)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 | 128GB</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,050,000</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Brand New</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 256GB Pink -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16pink.png" alt="iPhone 16 256GB Pink" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(214)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 | 256GB (Pink)</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,180,000</span>
+    </div>
+    <div class="phone-color-pills">
+      <span class="color-pill" style="background-color: #fce7f3; color: #be185d;">Pink</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Brand New</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 Plus 128GB -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16plus.png" alt="iPhone 16 Plus 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(215)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 Plus | 128GB</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,150,000</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Plus Display</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 Plus 128GB Pink -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16pluspink.png" alt="iPhone 16 Plus 128GB Pink" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(216)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 Plus | 128GB (Pink)</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,170,000</span>
+    </div>
+    <div class="phone-color-pills">
+      <span class="color-pill" style="background-color: #fce7f3; color: #be185d;">Pink</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Plus Display</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 Plus 256GB Colors -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16plus.png" alt="iPhone 16 Plus 256GB All Colors" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(217)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 Plus | 256GB</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,280,000</span>
+    </div>
+    <div class="phone-color-pills">
+      <span class="color-pill">Black</span>
+      <span class="color-pill">White</span>
+      <span class="color-pill">Teal</span>
+      <span class="color-pill">Ultramarine</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Plus Display</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 Plus 256GB Pink -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16pluspink.png" alt="iPhone 16 Plus 256GB Pink" >
+    <button class="hover-add-cart-btn" onclick="addToCart(218)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 Plus | 256GB (Pink)</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,300,000</span>
+    </div>
+    <div class="phone-color-pills">
+      <span class="color-pill" style="background-color: #fce7f3; color: #be185d;">Pink</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Plus Display</span>
+    </div>
+  </div>
+</div>
+
+<!-- iPhone 16 Pro Max 256GB -->
+<div class="laptop-card">
+  <div class="laptop-img-wrapper">
+    <img src="images/16promax.png" alt="iPhone 16 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(219)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE</div>
+    <h3 class="laptop-model">Apple iPhone 16 Pro Max | 256GB</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,540,000</span>
+    </div>
+    <div class="phone-color-pills">
+      <span class="color-pill">Desert Titanium</span>
+      <span class="color-pill">Natural Titanium</span>
+      <span class="color-pill">Black Titanium</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Pro Max</span>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="desktops.html">Desktops</a></li>
+          <li><a href="smart-gadgets.html">Gadgets</a></li>
+          <li><a href="index.html">Accessories</a></li>
+          <li><a href="computer-parts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">HP</a></li>
+          <li><a href="#">Dell</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>No 59, Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="images/script.js"></script>
+</body>
+</html>

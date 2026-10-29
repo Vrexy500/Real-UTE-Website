@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Used iPhones | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="Phones.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="Laptops.html" class="nav-item">Laptops</a>
+        <a href="Phones.html" class="nav-item active">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
+        <a href="Accesories.html" class="nav-item">Accessories</a>
+        <a href="Reviews.html" class="nav-item">Reviews</a>
+        <a href="Contact.html" class="nav-item">Contacts</a>
+        <a href="About.html" class="nav-item">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="laptops-hero-section">
+    <div class="watermark-bg">Grade A+</div>
+    <h1 class="laptops-title">Premium Used iPhones</h1>
+    <p style="text-align:center; color:#6b7280; font-weight:600; margin-top:5px;">UK / EUROPE SPEC • GRADE A+ • NO REFURBISHED ZONE</p>
+  </section>
+
+  <!-- Filter & Subtype Navigation Toolbar -->
+  <div class="filter-toolbar-container">
+    <div class="filter-toolbar">
+      <button class="show-filters-btn">
+        <i class="fas fa-sliders"></i> Show filters
+      </button>
+
+      <div class="category-subtypes">
+        <a href="Newiphones.html" class="subtype-link">New iPhones</a>
+        <a href="usediphones.html" class="subtype-link active"><i class="fab fa-apple"></i> Premium Used iPhones</a>
+        <a href="samsung.html" class="subtype-link"><i class="fas fa-mobile-alt"></i> Samsung Galaxy</a>
+      </div>
+
+      <div class="sort-dropdown-wrapper">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">Date, new to old</option>
+          <option value="price-low">Price, low to high</option>
+          <option value="price-high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Used iPhones Grid -->
+  <main class="laptops-main-container">
+    <div class="laptop-cards-grid">
+
+      <!-- iPhone 16 Pro Max 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/16promax.png" alt="iPhone 16 Pro Max" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(301)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 16 Pro Max | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦1,200,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 15 Pro 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/15pro.png" alt="iPhone 15 Pro 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(302)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 15 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦850,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 15 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/15pro.png" alt="iPhone 15 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(303)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 15 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦910,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 15 Pro 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/15pro.png" alt="iPhone 15 Pro 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(304)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 15 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦950,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+<!-- iPhone 15 Pro Max 256GB Grade A+ -->
+<div class="laptop-card">
+  <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+  <div class="laptop-img-wrapper">
+    <img src="images/15promax.png" alt="iPhone 15 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(333)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">APPLE (PREMIUM USED)</div>
+    <h3 class="laptop-model">Apple iPhone 15 Pro Max | Grade A+</h3>
+    <div class="price-box">
+      <span class="current-price">₦1,050,000</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+      <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+    </div>
+  </div>
+</div>
+      <!-- iPhone 14 Pro 1TB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/14pro.png" alt="iPhone 14 Pro 1TB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(305)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 14 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦800,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 1TB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 14 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/14pro.png" alt="iPhone 14 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(306)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 14 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦745,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 14 Pro 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A+ UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/14pro.png" alt="iPhone 14 Pro 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(307)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 14 Pro | Grade A+</h3>
+          <div class="price-box">
+            <span class="current-price">₦685,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 14 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/14.png" alt="iPhone 14 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(308)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 14 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦500,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 13 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/13.png" alt="iPhone 13 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(309)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 13 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦410,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 13 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/13.png" alt="iPhone 13 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(310)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 13 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦450,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 13 Pro 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/13pro.png" alt="iPhone 13 Pro 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(311)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 13 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦520,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 13 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/13pro.png" alt="iPhone 13 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(312)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 13 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦570,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro Max 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12promax.png" alt="iPhone 12 Pro Max 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(313)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦470,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro Max 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12promax.png" alt="iPhone 12 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(314)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦510,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro Max 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12promax.png" alt="iPhone 12 Pro Max 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(315)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦550,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12pro.png" alt="iPhone 12 Pro 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(316)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦410,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12pro.png" alt="iPhone 12 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(317)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦430,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 Pro 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12pro.png" alt="iPhone 12 Pro 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(318)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦450,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 64GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12.png" alt="iPhone 12 64GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(319)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦295,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 64GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 12 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/12.png" alt="iPhone 12 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(320)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 12 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦335,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 Pro Max 64GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11promax.png" alt="iPhone 11 Pro Max 64GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(321)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦345,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 64GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 Pro Max 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11promax.png" alt="iPhone 11 Pro Max 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(322)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦390,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 Pro Max 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11promax.png" alt="iPhone 11 Pro Max 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(323)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 Pro Max | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦410,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 Pro 64GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11pro.png" alt="iPhone 11 Pro 64GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(324)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦325,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 64GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 Pro 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11pro.png" alt="iPhone 11 Pro 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(325)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 Pro | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦355,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 64GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11.png" alt="iPhone 11 64GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(326)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦270,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 64GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11.png" alt="iPhone 11 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(327)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦305,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone 11 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/11.png" alt="iPhone 11 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(328)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone 11 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦330,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone XR 64GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/xr.png" alt="iPhone XR 64GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(329)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone XR | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦223,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 64GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone XR 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/xr.png" alt="iPhone XR 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(330)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone XR | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦240,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone XR 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/xr.png" alt="iPhone XR 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(331)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone XR | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦250,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iPhone X 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">Grade A UK</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/x.png" alt="iPhone X 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(332)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">APPLE (PREMIUM USED)</div>
+          <h3 class="laptop-model">Apple iPhone X | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦210,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK/EU Spec</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="Laptops.html">Laptops</a></li>
+          <li><a href="Phones.html">Phones</a></li>
+          <li><a href="Desktops.html">Desktops</a></li>
+          <li><a href="SmartGadgets.html">Gadgets</a></li>
+          <li><a href="index.html">Accessories</a></li>
+          <li><a href="Computerparts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">HP</a></li>
+          <li><a href="#">Dell</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
+          <li><a href="Refundpolicy.html">Refund Policy</a></li>
+          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>No 59, Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="Refundpolicy.html">Refund Policy</a>
+        <a href="Privacypolicy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="images/script.js"></script>
+</body>
+</html>

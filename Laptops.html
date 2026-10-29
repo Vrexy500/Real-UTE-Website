@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptops & Tablets | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Clean button styling for subtype filter buttons */
+    .subtype-link {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #6b7280;
+      font-weight: 600;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    /* Prevents clicks on inner icons from breaking event target detection */
+    .subtype-link * {
+      pointer-events: none;
+    }
+    .subtype-link.active {
+      color: #0f2b48;
+      font-weight: 800;
+      background-color: #f3f4f6;
+    }
+    .laptop-section {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="Laptops.html" class="nav-item active">Laptops</a>
+        <a href="Phones.html" class="nav-item">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
+        <a href="accessories.html" class="nav-item">Accessories</a>
+        <a href="Reviews.html" class="nav-item">Reviews</a>
+        <a href="Contact.html" class="nav-item">Contacts</a>
+        <a href="About.html" class="nav-item">Services</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="laptops-hero-section">
+    <div class="watermark-bg">LAPTOPS</div>
+    <h1 class="laptops-title">Laptops & Tablets</h1>
+  </section>
+
+  <!-- Sub-category Filter Toolbar -->
+  <div class="filter-toolbar-container">
+    <div class="filter-toolbar">
+      <button class="show-filters-btn">
+        <i class="fas fa-sliders"></i> Show filters
+      </button>
+
+      <div class="category-subtypes">
+        <button type="button" data-target="windows" class="subtype-link active">
+          <i class="fab fa-windows"></i> Windows Laptops
+        </button>
+        <button type="button" data-target="macbooks" class="subtype-link">
+          <i class="fab fa-apple"></i> MacBooks
+        </button>
+        <button type="button" data-target="ipads" class="subtype-link">
+          <i class="fas fa-tablet-alt"></i> iPads & Tablets
+        </button>
+        <button type="button" data-target="extenders" class="subtype-link">
+          <i class="fas fa-desktop"></i> Screen Extenders
+        </button>
+      </div>
+
+      <div class="sort-dropdown-wrapper">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">Date, new to old</option>
+          <option value="price-low">Price, low to high</option>
+          <option value="price-high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <main class="laptops-main-container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: WINDOWS LAPTOPS -->
+    <!-- ========================================== -->
+    <section id="windows" class="laptop-section" style="display: block;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Windows Laptops
+      </h2>
+
+      <div class="laptop-cards-grid">
+
+        <!-- HP Elitebook 830 G8 Touchscreen -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/830g8.png" alt="HP Elitebook 830 G8" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(701)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">HP</div>
+            <h3 class="laptop-model">HP Elitebook 830 G8 Touchscreen (11th Gen)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦500,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 16GB RAM / 256GB SSD • Touchscreen • Face ID + Fingerprint</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dell Latitude 7200 2-in-1 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/dell7200.png" alt="Dell Latitude 7200 2-in-1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(702)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">DELL</div>
+            <h3 class="laptop-model">Dell Latitude 7200 2-in-1 Touchscreen</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦280,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Intel Core i5 (8th Gen) • 8GB RAM / 256GB SSD • Detachable • Keyboard Light</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HP ZBook Firefly 14 G7 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/firefly14.png" alt="HP ZBook Firefly 14 G7" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(703)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">HP</div>
+            <h3 class="laptop-model">HP ZBook Firefly 14 G7 Workstation</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦480,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i5 vPro 10th Gen • 16GB RAM / 256GB NVMe SSD • Bang & Olufsen</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 2: MACBOOKS -->
+    <!-- ========================================== -->
+    <section id="macbooks" class="laptop-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Apple MacBooks
+      </h2>
+
+      <div class="laptop-cards-grid">
+
+        <!-- MacBook Pro 2017 15" 1TB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP2017.png" alt="MacBook Pro 15 2017" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(704)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">MacBook Pro 2017 15"</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦590,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 16GB RAM / 1TB SSD • 4GB Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2018 15" 256GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP2018-256gb.png" alt="MacBook Pro 15 2018" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(705)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">MacBook Pro 2018 15"</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦590,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 16GB RAM / 256GB SSD • 4GB Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 15" Core i7 512GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP2018-256gb.png" alt="MacBook Pro 15" 2018 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(706)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">MacBook Pro 15" Touch Bar</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦630,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 16GB RAM / 512GB SSD • 4GB Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2019 15" 16GB/512GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP2019.png" alt="MacBook Pro 15 2019" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(707)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">MacBook Pro 2019 15"</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦690,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 16GB RAM / 512GB SSD • 4GB Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2019 15" 32GB/512GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP2019.png" alt="MacBook Pro 15 2019 32GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(708)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE</div>
+            <h3 class="laptop-model">MacBook Pro 2019 15" (32GB RAM)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦730,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Core i7 • 32GB RAM / 512GB SSD • 4GB Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2021 14" M1 Pro 16/512 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP-M1.png" alt="MacBook Pro 14 M1 Pro" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(709)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE SILICON</div>
+            <h3 class="laptop-model">MacBook Pro 14" M1 Pro (2021)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,290,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M1 Pro Chip • 16GB RAM / 512GB SSD • Pristine UK Used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2021 14" M1 Pro 32/1TB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP-M1.png" alt="MacBook Pro 14 M1 Pro 32GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(710)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE SILICON</div>
+            <h3 class="laptop-model">MacBook Pro 14" M1 Pro (32GB / 1TB)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,490,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M1 Pro Chip • 32GB RAM / 1TB SSD • Pristine UK Used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2021 16" M1 Pro 16/512 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP-M1.png" alt="MacBook Pro 16 M1 Pro" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(711)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE SILICON</div>
+            <h3 class="laptop-model">MacBook Pro 16" M1 Pro (16GB / 512GB)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,300,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M1 Pro Chip • 16GB RAM / 512GB SSD • Pristine UK Used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2021 16" M1 Pro 16/1TB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP-M1.png".png" alt="MacBook Pro 16 M1 Pro 1TB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(712)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE SILICON</div>
+            <h3 class="laptop-model">MacBook Pro 16" M1 Pro (16GB / 1TB)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,390,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M1 Pro Chip • 16GB RAM / 1TB SSD • Pristine UK Used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro 2021 16" M1 Pro 32/512 -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/MBP-M1.png" alt="MacBook Pro 16 M1 Pro 32GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(713)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">APPLE SILICON</div>
+            <h3 class="laptop-model">MacBook Pro 16" M1 Pro (32GB / 512GB)</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,390,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M1 Pro Chip • 32GB RAM / 512GB SSD • Pristine UK Used</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Neo 256GB Brand New -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Macbook-neo.png" alt="MacBook Neo 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(714)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">MacBook Neo | 256GB SSD</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,030,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Brand New Factory Sealed • 256GB SSD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Neo 512GB Brand New -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Macbook-neo.png" alt="MacBook Neo 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(715)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">MacBook Neo | 512GB SSD</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,230,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Brand New Factory Sealed • 512GB SSD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MacBook Pro M5 16GB/1TB Brand New -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Macbok_pro_m5.png" alt="MacBook Pro M5" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(716)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">MacBook Pro M5 | 16GB / 1TB SSD</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦2,600,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M5 Chip • 16GB RAM / 1TB SSD • Factory Sealed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 3: IPADS & TABLETS -->
+    <!-- ========================================== -->
+    <section id="ipads" class="laptop-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Brand New iPads & Tablets
+      </h2>
+
+      <div class="laptop-cards-grid">
+
+        <!-- iPad 11 WiFi 128GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/Ipad11.png" alt="iPad 11" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(717)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">Apple iPad 11" WiFi | 128GB</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦690,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>11-inch Display • 128GB Storage • WiFi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPad Pro 12.9 M2 WiFi 128GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ipad pro m2.png" alt="iPad Pro 12.9 M2 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(718)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">iPad Pro 12.9" M2 WiFi | 128GB</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,050,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M2 Chip • Liquid Retina XDR • 128GB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPad Pro 12.9 M2 WiFi 256GB -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ipad pro m2.png" alt="iPad Pro 12.9 M2 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(719)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">iPad Pro 12.9" M2 WiFi | 256GB</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,170,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M2 Chip • Liquid Retina XDR • 256GB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPad Air 13" M3 128GB WiFi -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ipad-air13.png" alt="iPad Air 13 M3" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(720)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">iPad Air 13" M3 Chip WiFi | 128GB</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,090,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M3 Chip • 13-inch Display • 128GB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPad M5 Chip 256GB WiFi + Cellular -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/ipad-pro-m5.png" alt="iPad M5 Chip" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(721)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">BRAND NEW APPLE</div>
+            <h3 class="laptop-model">iPad M5 Chip WiFi + Cellular | 256GB</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦1,770,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>M5 Chip • WiFi + Cellular • 256GB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- TAB 4: SCREEN EXTENDERS -->
+    <!-- ========================================== -->
+    <section id="extenders" class="laptop-section" style="display: none;">
+      <h2 style="font-size: 1.5rem; color: #0f2b48; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">
+        Screen Extenders & Accessories
+      </h2>
+
+      <div class="laptop-cards-grid">
+
+        <!-- Laptop Screen Extender Triple Screen -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/triplesc.png" alt="Laptop Extender Triple Screen" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=500&q=80';">
+            <button class="hover-add-cart-btn" onclick="addToCart(722)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">UNSTOPPABLE ACCESSORIES</div>
+            <h3 class="laptop-model">Laptop Triple Screen Portable Monitor Extender</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦370,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Dual Portable Displays • Type-C Plug & Play • Universal Fit</span>
+            </div>
+          </div>
+        </div>
+
+          <!-- Laptop Screen Extender Double Screen -->
+        <div class="laptop-card">
+          <div class="laptop-img-wrapper">
+            <img src="images/doublesc.png" alt="Laptop Extender Double Screen" onerror="this.onerror=null;">
+            <button class="hover-add-cart-btn" onclick="addToCart(722)">Add to cart</button>
+          </div>
+          <div class="laptop-info">
+            <div class="brand-name">UNSTOPPABLE ACCESSORIES</div>
+            <h3 class="laptop-model">Laptop Double Screen Portable Monitor Extender</h3>
+            <div class="price-box">
+              <span class="current-price" style="color: #dc2626; font-weight: 800; font-size: 1.1rem;">₦280,000</span>
+            </div>
+            <div class="laptop-specs-bar" style="margin-top: 8px; font-size: 0.85rem; color: #4b5563;">
+              <span>Dual Portable Displays • Type-C Plug & Play • Universal Fit</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="Laptops.html">Laptops</a></li>
+          <li><a href="index.html">Phones</a></li>
+          <li><a href="Desktops.html">Desktops</a></li>
+          <li><a href="SmartGadgets.html">Gadgets</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="Computerparts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">HP</a></li>
+          <li><a href="#">Dell</a></li>
+          <li><a href="#">Lenovo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
+          <li><a href="Refundpolicy.html">Refund Policy</a></li>
+          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+          <p style="margin-top: 5px; font-weight: 700; color: #10b981;">CAC Reg No: 9362445</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise (CAC Reg: 9362445). All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="Refundpolicy.html">Refund Policy</a>
+        <a href="Privacypolicy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <!-- Bulletproof DOM-Loaded Tab Switching Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filterButtons = document.querySelectorAll('.category-subtypes .subtype-link');
+      const sections = document.querySelectorAll('.laptop-section');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('data-target');
+
+          // 1. Hide all sections
+          sections.forEach(sec => {
+            sec.style.display = 'none';
+          });
+
+          // 2. Show the selected target section
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.style.display = 'block';
+          }
+
+          // 3. Update button active states
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

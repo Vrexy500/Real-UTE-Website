@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samsung Galaxy | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="Phones.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="Laptops.html" class="nav-item">Laptops</a>
+        <a href="Phones.html" class="nav-item active">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
+        <a href="Accesories.html" class="nav-item">Accessories</a>
+        <a href="Reviews.html" class="nav-item">Reviews</a>
+        <a href="Contact.html" class="nav-item">Contacts</a>
+        <a href="About.html" class="nav-item">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="laptops-hero-section">
+    <div class="watermark-bg">Samsung</div>
+    <h1 class="laptops-title">Samsung Galaxy Series</h1>
+    <p style="text-align:center; color:#6b7280; font-weight:600; margin-top:5px;">UK USED • GRADE A • PREMIUM SPECIFICATIONS</p>
+  </section>
+
+  <!-- Filter & Subtype Toolbar -->
+  <div class="filter-toolbar-container">
+    <div class="filter-toolbar">
+      <button class="show-filters-btn">
+        <i class="fas fa-sliders"></i> Show filters
+      </button>
+
+      <div class="category-subtypes">
+        <a href="Newiphones.html" class="subtype-link">New iPhones</a>
+        <a href="usediphones.html" class="subtype-link"><i class="fab fa-apple"></i> Premium Used iPhones</a>
+        <a href="samsung.html" class="subtype-link active"><i class="fas fa-mobile-alt"></i> Samsung Galaxy</a>
+      </div>
+
+      <div class="sort-dropdown-wrapper">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">Date, new to old</option>
+          <option value="price-low">Price, low to high</option>
+          <option value="price-high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Samsung Cards Grid -->
+  <main class="laptops-main-container">
+    <div class="laptop-cards-grid">
+
+      <!-- Samsung Galaxy S10 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s10.png" alt="Samsung Galaxy S10 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(401)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S10 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦240,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S10 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s10.png" alt="Samsung Galaxy S10 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(402)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S10 | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦255,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S21 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s21.png" alt="Samsung Galaxy S21 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(403)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S21 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦270,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S21 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s21.png" alt="Samsung Galaxy S21 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(404)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S21 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦280,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S22 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s22.png" alt="Samsung Galaxy S22 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(405)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S22 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦320,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S22 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s22.png" alt="Samsung Galaxy S22 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(406)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S22 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦340,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S22 Ultra 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s22ultra.png" alt="Samsung Galaxy S22 Ultra 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(407)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S22 Ultra 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦490,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-pen"></i> S-Pen Included</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S22 Ultra 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s22ultra.png" alt="Samsung Galaxy S22 Ultra 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(408)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S22 Ultra 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦530,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-pen"></i> S-Pen Included</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S23 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s23.png" alt="Samsung Galaxy S23 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(409)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S23 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦410,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S23 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s23.png" alt="Samsung Galaxy S23 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(410)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S23 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦430,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-check-circle"></i> UK Spec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy S24 128GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/s24.png" alt="Samsung Galaxy S24 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(411)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy S24 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦530,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+            <span><i class="fas fa-magic"></i> Galaxy AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy Z Flip 3 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/flip3.png" alt="Samsung Galaxy Z Flip 3 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(412)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy Z Flip 3 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦310,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-mobile"></i> Foldable Screen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy Z Fold 3 256GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/fold3.png" alt="Samsung Galaxy Z Fold 3 256GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(413)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy Z Fold 3 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦510,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 256GB Storage</span>
+            <span><i class="fas fa-tablet-alt"></i> Dual Display</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy Z Fold 4 512GB -->
+      <div class="laptop-card">
+        <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+        <div class="laptop-img-wrapper">
+          <img src="images/fold4.png" alt="Samsung Galaxy Z Fold 4 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+          <button class="hover-add-cart-btn" onclick="addToCart(414)">Add to cart</button>
+        </div>
+        <div class="laptop-info">
+          <div class="brand-name">SAMSUNG</div>
+          <h3 class="laptop-model">Samsung Galaxy Z Fold 4 5G | Grade A</h3>
+          <div class="price-box">
+            <span class="current-price">₦600,000</span>
+          </div>
+          <div class="laptop-specs-bar">
+            <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+            <span><i class="fas fa-tablet-alt"></i> Dual Display</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung Galaxy Z Flip 5 512GB -->
+<div class="laptop-card">
+  <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+  <div class="laptop-img-wrapper">
+    <img src="images/flip5.png" alt="Samsung Galaxy Z Flip 5 512GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(415)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">SAMSUNG</div>
+    <h3 class="laptop-model">Samsung Galaxy Z Flip 5 5G | Grade A</h3>
+    <div class="price-box">
+      <span class="current-price">₦450,000</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 512GB Storage</span>
+      <span><i class="fas fa-mobile"></i> Flex Window</span>
+    </div>
+  </div>
+</div>
+
+<!-- Samsung Galaxy S21 Ultra 128GB -->
+<div class="laptop-card">
+  <div class="save-badge" style="background-color: #0f2b48;">UK Used</div>
+  <div class="laptop-img-wrapper">
+    <img src="images/s21ultra.png" alt="Samsung Galaxy S21 Ultra 128GB" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80';">
+    <button class="hover-add-cart-btn" onclick="addToCart(416)">Add to cart</button>
+  </div>
+  <div class="laptop-info">
+    <div class="brand-name">SAMSUNG</div>
+    <h3 class="laptop-model">Samsung Galaxy S21 Ultra 5G | Grade A</h3>
+    <div class="price-box">
+      <span class="current-price">₦390,000</span>
+    </div>
+    <div class="laptop-specs-bar">
+      <span><i class="fas fa-hdd"></i> 128GB Storage</span>
+      <span><i class="fas fa-camera"></i> 108MP Camera</span>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="Laptops.html">Laptops</a></li>
+          <li><a href="Phones.html">Phones</a></li>
+          <li><a href="Desktops.html">Desktops</a></li>
+          <li><a href="SmartGadgets.html">Gadgets</a></li>
+          <li><a href="index.html">Accessories</a></li>
+          <li><a href="Computerparts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">HP</a></li>
+          <li><a href="#">Dell</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
+          <li><a href="Refundpolicy.html">Refund Policy</a></li>
+          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>No 59, Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="Refundpolicy.html">Refund Policy</a>
+        <a href="Privacypolicy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="images/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Unstoppable Tech Enterprise</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .contact-header {
+      margin-bottom: 40px;
+    }
+    .contact-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #0f2b48;
+      margin-bottom: 10px;
+    }
+    .contact-header p {
+      color: #6b7280;
+      font-size: 1.1rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .contact-form-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      background-color: #f9fafb;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #0f2b48;
+      background-color: #fff;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 160px;
+    }
+    .send-msg-btn {
+      background-color: #0f2b48;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      align-self: flex-start;
+    }
+    .send-msg-btn:hover {
+      background-color: #1a4472;
+    }
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .info-block h3 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .info-block p, .info-block a {
+      font-size: 0.95rem;
+      color: #111827;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .info-block a:hover {
+      color: #0f2b48;
+      text-decoration: underline;
+    }
+    .social-icons-row {
+      display: flex;
+      gap: 20px;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+    .social-icons-row a {
+      color: #111827;
+      transition: color 0.2s;
+    }
+    .social-icons-row a:hover {
+      color: #0f2b48;
+    }
+    /* Map Section Card */
+    .map-section-card {
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+    .map-card-inner {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    @media (max-width: 850px) {
+      .map-card-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    .map-iframe-wrapper {
+      position: relative;
+      min-height: 350px;
+      background: #eee;
+    }
+    .map-iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .map-details-pane {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .map-details-pane h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0f2b48;
+      margin-bottom: 10px;
+    }
+    .map-rating {
+      color: #f59e0b;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .map-meta-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: #4b5563;
+      align-items: flex-start;
+    }
+    .map-meta-item i {
+      margin-top: 3px;
+      color: #0f2b48;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
+      </a>
+     <div class="social-links">
+        <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartBadgeCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-links">
+        <a href="Laptops.html" class="nav-item">Laptops</a>
+        <a href="Phones.html" class="nav-item">Phones</a>
+        <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
+        <a href="Accesories.html" class="nav-item">Accessories</a>
+        <a href="Reviews.html" class="nav-item">Reviews</a>
+        <a href="Contact.html" class="nav-item active">Contacts</a>
+        <a href="About.html" class="nav-item">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Us Main Section -->
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Our team is here to help.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Left: Contact Form -->
+      <form class="contact-form-wrapper" onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you shortly.');">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="tel" placeholder="Phone number" required>
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>Subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="order">Order Status</option>
+              <option value="support">Technical Support</option>
+              <option value="wholesale">Wholesale / Vendor</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="send-msg-btn">Send message</button>
+      </form>
+
+      <!-- Right: Sidebar Info -->
+      <div class="contact-sidebar">
+        <div class="info-block">
+          <h3>Address</h3>
+          <p>Unstoppable Tech, Zain Plaza, No 59 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria.</p>
+        </div>
+        <div class="info-block">
+          <h3>Email</h3>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+        </div>
+        <div class="info-block">
+          <h3>Phone</h3>
+          <p>+234 814 247 2580<br>+234 815 656 1064</p>
+          <p style="margin-top: 5px; color: #6b7280; font-size: 0.85rem;">Mon – Sat: 09:00 AM – 06:00 PM</p>
+        </div>
+        <div class="info-block">
+          <h3>Follow Us</h3>
+          <div class="social-icons-row">
+            <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Map Location Card Section -->
+  <div class="map-section-card">
+    <div class="map-card-inner">
+      <div class="map-iframe-wrapper">
+        <!-- Embedded Google Map centered on Zain Plaza, Chime Avenue, New Haven, Enugu -->
+        <iframe title="Unstoppable Tech Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.671378122648!2d7.5025!3d6.4474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjYnNTAuNiJOIDcnMzAnMDkuMCJF!5e0!3m2!1sen!2sng!4v1650000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="map-details-pane">
+        <h2>[Unstoppable Tech Store](http://googleusercontent.com/map_location_reference/0)</h2>
+        <div class="map-rating">
+          5.0 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (Verified Location)
+        </div>
+        <div class="map-meta-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+234 815 656 1064</span>
+        </div>
+        <div class="map-meta-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</span>
+        </div>
+        <div class="map-meta-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon – Sat: 09:00 AM – 06:00 PM</span>
+        </div>
+        <div style="margin-top: 15px;">
+          <a href="https://maps.google.com/?cid=15260128994543427860" target="_blank" style="display: inline-block; background-color: #0f2b48; color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-decoration: none;">
+            <i class="fas fa-external-link-alt"></i> Open in Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="footer-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/eaf8f8/0f2b48?text=Unstoppable+Tech';">
+      </div>
+      <div>
+        <h4 class="footer-title">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="Laptops.html">Laptops</a></li>
+          <li><a href="Phones.html">Phones</a></li>
+          <li><a href="Desktops.html">Desktops</a></li>
+          <li><a href="SmartGadgets.html">Gadgets</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="Computerparts.html">Computer parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Top Brands</h4>
+        <ul class="footer-links">
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">HP</a></li>
+          <li><a href="#">Dell</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Information</h4>
+        <ul class="footer-links">
+          <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
+          <li><a href="Refundpolicy.html">Refund Policy</a></li>
+          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact information</h4>
+        <div class="contact-info">
+          <a href="tel:+2348142472580">+2348142472580</a>
+          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
+          <p>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-footer">
+      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div class="sub-footer-links">
+        <a href="Refundpolicy.html">Refund Policy</a>
+        <a href="Privacypolicy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
