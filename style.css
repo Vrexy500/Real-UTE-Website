@@ -986,3 +986,124 @@ body {
   border-radius: 10px;
   border: 1px solid #e5e7eb;
 }
+
+/* Page Background */
+body {
+  background-color: #f8fafc; /* Soft off-white slate */
+  color: #1e293b;
+}
+
+/* Hero Section Accent */
+.laptops-hero-section {
+  background: linear-gradient(135deg, #0f2b48 0%, #1a4472 100%);
+  color: #ffffff;
+}
+
+.watermark-bg {
+  color: rgba(255, 255, 255, 0.05); /* Soft background watermark */
+}
+
+/* Product Cards Styling */
+.laptop-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(15, 43, 72, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.laptop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(15, 43, 72, 0.1);
+}
+/* ========================================== */
+/* MOBILE RESPONSIVE STYLES                    */
+/* ========================================== */
+
+@media (max-width: 768px) {
+  /* 1. Stack top header and logo nicely */
+  .top-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* 2. Make navigation links horizontally scrollable on phones */
+  .nav-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 10px;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  /* 3. Force product grid to 1 or 2 columns on phones instead of 4 */
+  .laptop-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  /* 4. Adjust filter toolbar layout for mobile */
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .category-subtypes {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+  }
+
+  /* 5. Shrink hero title text so it doesn't overflow on small screens */
+  .laptops-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Extra small devices (iphones portrait) */
+@media (max-width: 480px) {
+  .laptop-cards-grid {
+    grid-template-columns: 1fr !important; /* Single column stack for very small phones */
+  }
+}
+
+/* Keeps both the red bar & header glued to top on scroll */
+.sticky-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Red Announcement Bar */
+.top-announcement-bar {
+  background-color: #dc2626; /* Red Accent */
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-announcement-bar i {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .top-announcement-bar {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+}

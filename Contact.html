@@ -11,200 +11,184 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Contact Page Specific Styles */
+    /* Contact Page Custom Layout */
     .contact-container {
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 40px auto 80px auto;
       padding: 0 20px;
     }
     .contact-header {
       margin-bottom: 40px;
     }
     .contact-header h1 {
-      font-size: 3rem;
-      font-weight: 800;
+      font-size: 2.8rem;
+      font-weight: 900;
       color: #0f2b48;
       margin-bottom: 10px;
     }
     .contact-header p {
-      color: #6b7280;
+      color: #64748b;
       font-size: 1.1rem;
     }
+
     .contact-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 3fr 2fr;
       gap: 50px;
-      align-items: start;
+      margin-bottom: 60px;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
     }
-    .contact-form-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .form-row {
+
+    /* Form Inputs Styling */
+    .contact-form {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
+    .form-group-full {
+      grid-column: span 2;
+    }
     @media (max-width: 600px) {
-      .form-row {
+      .contact-form {
         grid-template-columns: 1fr;
       }
+      .form-group-full {
+        grid-column: span 1;
+      }
     }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+
+    .form-control {
       width: 100%;
-      padding: 16px;
-      border: 1px solid #e5e7eb;
+      padding: 14px 16px;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
       border-radius: 8px;
-      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
-      background-color: #f9fafb;
+      font-family: inherit;
+      color: #1e293b;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .form-control:focus {
       outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
       border-color: #0f2b48;
-      background-color: #fff;
+      background-color: #ffffff;
     }
-    .form-group textarea {
+    textarea.form-control {
       resize: vertical;
-      min-height: 160px;
+      min-height: 140px;
     }
-    .send-msg-btn {
+
+    .send-whatsapp-btn {
+      grid-column: span 2;
+      justify-self: start;
       background-color: #0f2b48;
       color: white;
       border: none;
-      padding: 16px 32px;
+      padding: 14px 28px;
       border-radius: 8px;
-      font-weight: 700;
       font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      align-self: flex-start;
-    }
-    .send-msg-btn:hover {
-      background-color: #1a4472;
-    }
-    .contact-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .info-block h3 {
-      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #6b7280;
-      margin-bottom: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
-    .info-block p, .info-block a {
-      font-size: 0.95rem;
-      color: #111827;
-      text-decoration: none;
-      line-height: 1.5;
+    .send-whatsapp-btn:hover {
+      background-color: #25d366; /* Changes to WhatsApp green on hover */
+      transform: translateY(-2px);
     }
-    .info-block a:hover {
-      color: #0f2b48;
-      text-decoration: underline;
-    }
-    .social-icons-row {
-      display: flex;
-      gap: 20px;
-      font-size: 1.2rem;
-      margin-top: 5px;
-    }
-    .social-icons-row a {
-      color: #111827;
-      transition: color 0.2s;
-    }
-    .social-icons-row a:hover {
-      color: #0f2b48;
-    }
-    /* Map Section Card */
-    .map-section-card {
-      max-width: 1200px;
-      margin: 0 auto 60px auto;
-      padding: 0 20px;
-    }
-    .map-card-inner {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    @media (max-width: 850px) {
-      .map-card-inner {
-        grid-template-columns: 1fr;
+    @media (max-width: 600px) {
+      .send-whatsapp-btn {
+        grid-column: span 1;
+        width: 100%;
+        justify-content: center;
       }
     }
-    .map-iframe-wrapper {
-      position: relative;
-      min-height: 350px;
-      background: #eee;
+
+    /* Contact Details Sidebar */
+    .info-group {
+      margin-bottom: 30px;
     }
-    .map-iframe-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .map-details-pane {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .map-details-pane h2 {
-      font-size: 1.5rem;
+    .info-group h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
       font-weight: 800;
-      color: #0f2b48;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    .map-rating {
-      color: #f59e0b;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 15px;
+    .info-group p, .info-group a {
+      font-size: 1rem;
+      color: #1e293b;
+      line-height: 1.6;
+      text-decoration: none;
+      display: block;
     }
-    .map-meta-item {
+    .info-group a:hover {
+      color: #dc2626;
+    }
+
+    .contact-socials {
       display: flex;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 0.9rem;
-      color: #4b5563;
-      align-items: flex-start;
+      gap: 15px;
+      margin-top: 10px;
     }
-    .map-meta-item i {
-      margin-top: 3px;
+    .contact-socials a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: #f1f5f9;
       color: #0f2b48;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+    }
+    .contact-socials a:hover {
+      background-color: #0f2b48;
+      color: #ffffff;
+    }
+
+    /* Embedded Map Section */
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      display: block;
     }
   </style>
 </head>
 <body>
 
   <!-- Header -->
+   <div class="top-announcement-bar">
+    <i class="fas fa-circle-info"></i>
+    <span>Please note: Prices are subject to change without prior notice due to market volatility. Kindly confirm current rates with our representatives.</span>
+  </div>
+
+  <!-- Main Header -->
   <header class="header">
     <div class="top-header">
-      <a href="index.html" class="logo-link">
+      <a href="Phones.html" class="logo-link">
         <img src="images/logo.png" alt="Unstoppable Tech Enterprise" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/220x60/ffffff/0f2b48?text=Unstoppable+Tech';">
       </a>
-     <div class="social-links">
+      <div class="social-links">
         <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/message/HZ3OK4SEQXMGN1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
           <i class="fas fa-shopping-bag"></i>
           <span class="cart-count" id="cartBadgeCount">0</span>
@@ -214,113 +198,117 @@
     <nav class="nav-bar">
       <div class="nav-links">
         <a href="Laptops.html" class="nav-item">Laptops</a>
-        <a href="Phones.html" class="nav-item">Phones</a>
+        <a href="Phones.html" class="nav-item active">Phones</a>
         <a href="SmartGadgets.html" class="nav-item">Smart Gadgets</a>
         <a href="Accesories.html" class="nav-item">Accessories</a>
         <a href="Reviews.html" class="nav-item">Reviews</a>
-        <a href="Contact.html" class="nav-item active">Contacts</a>
+        <a href="Contact.html" class="nav-item">Contact Us</a>
         <a href="About.html" class="nav-item">About</a>
       </div>
     </nav>
   </header>
 
-  <!-- Contact Us Main Section -->
-  <div class="contact-container">
+</div>
+
+  <main class="contact-container">
     <div class="contact-header">
       <h1>Contact Us</h1>
-      <p>We'd love to hear from you. Our team is here to help.</p>
+      <p>We'd love to hear from you. Our team is here to help with all gadget orders, inquiries, and waybill tracking.</p>
     </div>
 
     <div class="contact-grid">
-      <!-- Left: Contact Form -->
-      <form class="contact-form-wrapper" onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you shortly.');">
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" placeholder="Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Email" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="tel" placeholder="Phone number" required>
-          </div>
-          <div class="form-group">
-            <select required>
-              <option value="" disabled selected>Subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="order">Order Status</option>
-              <option value="support">Technical Support</option>
-              <option value="wholesale">Wholesale / Vendor</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea placeholder="Message" required></textarea>
-        </div>
-        <button type="submit" class="send-msg-btn">Send message</button>
-      </form>
+      
+      <!-- Interactive WhatsApp Contact Form -->
+      <div>
+        <form class="contact-form" id="whatsappContactForm">
+  <div>
+    <input type="text" id="contactName" class="form-control" placeholder="Name" required>
+  </div>
+  <div>
+    <input type="email" id="contactEmail" class="form-control" placeholder="Email" required>
+  </div>
+  <div>
+    <input type="tel" id="contactPhone" class="form-control" placeholder="Phone number" required>
+  </div>
+  <div>
+    <select id="contactSubject" class="form-control" required>
+      <option value="" disabled selected>Select Subject</option>
+      <option value="Laptop Inquiry / Order">Laptop Inquiry / Order</option>
+      <option value="Smartphone Inquiry / Order">Smartphone Inquiry / Order</option>
+      <option value="Smart Gadgets / Accessories">Smart Gadgets / Accessories</option>
+      <option value="Waybill & Delivery Status">Waybill & Delivery Status</option>
+      <option value="Device Swap / Trade-In">Device Swap / Trade-In</option>
+      <option value="General Question">General Question</option>
+    </select>
+  </div>
+  <div class="form-group-full">
+    <textarea id="contactMessage" class="form-control" placeholder="Message" required></textarea>
+  </div>
 
-      <!-- Right: Sidebar Info -->
-      <div class="contact-sidebar">
-        <div class="info-block">
-          <h3>Address</h3>
-          <p>Unstoppable Tech, Zain Plaza, No 59 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria.</p>
+  <!-- Submit Button -->
+  <button type="submit" class="send-whatsapp-btn">
+    <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Send Message
+  </button>
+
+  <!-- Option 2 Disclaimer Badge + Price Volatility Notice -->
+  <div class="form-group-full" style="grid-column: span 2; margin-top: 10px; display: flex; flex-direction: column; gap: 6px;">
+    <p style="font-size: 0.85rem; color: #64748b; margin: 0; display: flex; align-items: center; gap: 6px;">
+      <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1rem;"></i>
+      <span>Clicking "Send Message" will redirect you to WhatsApp to connect directly with an Unstoppable Tech Sales Representative.</span>
+    </p>
+    <p style="font-size: 0.82rem; color: #dc2626; margin: 0; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+      <i class="fas fa-circle-info" style="font-size: 0.9rem;"></i>
+      <span>Please note: Prices are subject to change without prior notice due to market volatility.</span>
+    </p>
+  </div>
+</form>
+      </div>
+
+      <!-- Store Contact Information -->
+      <div class="contact-info-sidebar">
+        
+        <div class="info-group">
+          <h4>ADDRESS</h4>
+          <p>Unstoppable Tech Enterprise,<br>Zain Plaza, No 50 Chime Avenue,<br>By Block Bus Stop, New Haven, Enugu, Nigeria.</p>
+          <p style="margin-top: 6px; font-weight: 700; color: #10b981; font-size: 0.9rem;">CAC Reg No: 9362445</p>
         </div>
-        <div class="info-block">
-          <h3>Email</h3>
+
+        <div class="info-group">
+          <h4>EMAIL</h4>
           <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
         </div>
-        <div class="info-block">
-          <h3>Phone</h3>
-          <p>+234 814 247 2580<br>+234 815 656 1064</p>
-          <p style="margin-top: 5px; color: #6b7280; font-size: 0.85rem;">Mon – Sat: 09:00 AM – 06:00 PM</p>
+
+        <div class="info-group">
+          <h4>PHONE / WHATSAPP</h4>
+          <a href="tel:+2348142472580">+234 814 247 2580</a>
+          <a href="tel:+2349138337421">+234 913 833 7421</a>
+          <p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">Mon – Sat: 09:00 AM – 06:00 PM</p>
         </div>
-        <div class="info-block">
-          <h3>Follow Us</h3>
-          <div class="social-icons-row">
+
+        <div class="info-group">
+          <h4>FOLLOW US</h4>
+          <div class="contact-socials">
             <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/message/I3PFMLFNUW4SJ1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/message/HZ3OK4SEQXMGN1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Interactive Map Location Card Section -->
-  <div class="map-section-card">
-    <div class="map-card-inner">
-      <div class="map-iframe-wrapper">
-        <!-- Embedded Google Map centered on Zain Plaza, Chime Avenue, New Haven, Enugu -->
-        <iframe title="Unstoppable Tech Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.671378122648!2d7.5025!3d6.4474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjYnNTAuNiJOIDcnMzAnMDkuMCJF!5e0!3m2!1sen!2sng!4v1650000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
       </div>
-      <div class="map-details-pane">
-        <h2>[Unstoppable Tech Store](http://googleusercontent.com/map_location_reference/0)</h2>
-        <div class="map-rating">
-          5.0 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (Verified Location)
-        </div>
-        <div class="map-meta-item">
-          <i class="fas fa-phone-alt"></i>
-          <span>+234 815 656 1064</span>
-        </div>
-        <div class="map-meta-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</span>
-        </div>
-        <div class="map-meta-item">
-          <i class="fas fa-clock"></i>
-          <span>Mon – Sat: 09:00 AM – 06:00 PM</span>
-        </div>
-        <div style="margin-top: 15px;">
-          <a href="https://maps.google.com/?cid=15260128994543427860" target="_blank" style="display: inline-block; background-color: #0f2b48; color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; text-decoration: none;">
-            <i class="fas fa-external-link-alt"></i> Open in Maps
-          </a>
-        </div>
-      </div>
+
     </div>
-  </div>
+
+    <!-- Embedded Map Section -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7197171458925!2d7.5188889!3d6.4427778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a3d517c2f623%3A0x6a1a7c5b6b12a801!2sChime%20Ave%2C%20New%20Haven%2C%20Enugu!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -332,29 +320,26 @@
         <h4 class="footer-title">Shop</h4>
         <ul class="footer-links">
           <li><a href="Laptops.html">Laptops</a></li>
-          <li><a href="Phones.html">Phones</a></li>
+          <li><a href="index.html">Phones</a></li>
           <li><a href="Desktops.html">Desktops</a></li>
           <li><a href="SmartGadgets.html">Gadgets</a></li>
           <li><a href="accessories.html">Accessories</a></li>
-          <li><a href="Computerparts.html">Computer parts</a></li>
         </ul>
       </div>
       <div>
         <h4 class="footer-title">Top Brands</h4>
         <ul class="footer-links">
-          <li><a href="#">Apple</a></li>
-          <li><a href="#">Samsung</a></li>
-          <li><a href="#">HP</a></li>
-          <li><a href="#">Dell</a></li>
+          <li><a href="Phones.html">Apple</a></li>
+          <li><a href="Phones.html">Samsung</a></li>
+          <li><a href="Laptops.html">HP</a></li>
+          <li><a href="SmartGadgets.html">Sony</a></li>
         </ul>
       </div>
       <div>
         <h4 class="footer-title">Information</h4>
         <ul class="footer-links">
           <li><a href="Shippingpolicy.html">Shipping Policy</a></li>
-          <li><a href="Refundpolicy.html">Refund Policy</a></li>
-          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
-          <li><a href="Reviews.html">FAQs</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
           <li><a href="Contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -362,15 +347,16 @@
         <h4 class="footer-title">Contact information</h4>
         <div class="contact-info">
           <a href="tel:+2348142472580">+2348142472580</a>
-          <a href="tel:+2348156561064">+2348156561064</a>
+          <a href="tel:+2349138337421">+2349138337421</a>
           <a href="mailto:Unstoppabletech50@gmail.com">Unstoppabletech50@gmail.com</a>
-          <p>Zain Plaza, No 50 Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+          <p>Zain Plaza, No 59, Chime Avenue, By Block Bus Stop, New Haven, Enugu, Nigeria</p>
+          <p style="margin-top: 5px; font-weight: 700; color: #10b981;">CAC Reg No: 9362445</p>
         </div>
       </div>
     </div>
 
     <div class="sub-footer">
-      <div>© 2026 Unstoppable Tech Enterprise. All rights reserved.</div>
+      <div>© 2026 Unstoppable Tech Enterprise (CAC Reg: 9362445). All rights reserved.</div>
       <div class="sub-footer-links">
         <a href="Refundpolicy.html">Refund Policy</a>
         <a href="Privacypolicy.html">Privacy Policy</a>
@@ -380,5 +366,42 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Script to capture form inputs and redirect to WhatsApp -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactForm = document.getElementById("whatsappContactForm");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault(); // Stop standard form submission
+
+          const name = document.getElementById("contactName").value.trim();
+          const email = document.getElementById("contactEmail").value.trim();
+          const phone = document.getElementById("contactPhone").value.trim();
+          const subject = document.getElementById("contactSubject").value;
+          const message = document.getElementById("contactMessage").value.trim();
+
+          // Build neatly formatted message for WhatsApp
+          let text = `Hello Unstoppable Tech! 👋\n\n`;
+          text += `*New Contact Message from Website*\n`;
+          text += `-----------------------------------\n`;
+          text += `👤 *Name:* ${name}\n`;
+          text += `📧 *Email:* ${email}\n`;
+          text += `📱 *Phone:* ${phone}\n`;
+          text += `📌 *Subject:* ${subject}\n\n`;
+          text += `💬 *Message:* \n${message}`;
+
+          const encodedMessage = encodeURIComponent(text);
+
+          // Redirect to your primary WhatsApp line
+          const whatsappURL = `https://wa.me/2349138337421?text=${encodedMessage}`;
+
+          window.open(whatsappURL, "_blank");
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
