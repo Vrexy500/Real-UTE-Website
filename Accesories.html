@@ -29,10 +29,7 @@
         <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://wa.me/message/HZ3OK4SEQXMGN1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="cart-count" id="cartBadgeCount">0</span>
-        </button>
+             
       </div>
     </div>
     <nav class="nav-bar">
@@ -59,29 +56,34 @@
   </section>
 
   <!-- Sub-category Filter Toolbar -->
-  <div class="filter-toolbar-container">
-    <div class="filter-toolbar">
-      <button class="show-filters-btn">
-        <i class="fas fa-sliders"></i> Show filters
-      </button>
+ <!-- Filter & Brand Switcher Toolbar -->
+<div class="filter-toolbar-container">
+  <div class="filter-toolbar">
+       
+    <!-- Click to Order Button -->
+    <a href="contact.html?subject=Direct%20Order" class="show-filters-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+      <i class="fas fa-shopping-bag"></i> Click to Order
+    </a>
 
-      <div class="category-subtypes">
-        <a href="#power-banks" class="subtype-link active"><i class="fas fa-battery-full"></i> Power Banks</a>
-        <a href="#adapters" class="subtype-link"><i class="fas fa-plug"></i> Adapters</a>
-        <a href="#cables" class="subtype-link"><i class="fas fa-bolt"></i> Cables & Charging</a>
-      </div>
-
-      <div class="sort-dropdown-wrapper">
-        <label for="sortSelect">Sort by:</label>
-        <select id="sortSelect" class="sort-select">
-          <option value="newest">Date, new to old</option>
-          <option value="price-low">Price, low to high</option>
-          <option value="price-high">Price, high to low</option>
-        </select>
-      </div>
+    <!-- Accessories Sub-Category Tabs -->
+    <div class="category-subtypes">
+      <a href="#power-banks" class="subtype-link active"><i class="fas fa-battery-full"></i> Power Banks</a>
+      <a href="#adapters" class="subtype-link"><i class="fas fa-plug"></i> Adapters</a>
+      <a href="#cables" class="subtype-link"><i class="fas fa-bolt"></i> Cables & Charging</a>
     </div>
-  </div>
 
+    <!-- Sort Dropdown -->
+    <div class="sort-dropdown-wrapper">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect" class="sort-select">
+        <option value="newest">Date, new to old</option>
+        <option value="price-low">Price, low to high</option>
+        <option value="price-high">Price, high to low</option>
+      </select>
+    </div>
+
+  </div>
+</div>
   <main class="laptops-main-container">
 
     <!-- ========================================== -->
@@ -98,8 +100,7 @@
         <div class="laptop-card">
           <div class="save-badge" style="background-color: #0f2b48;">80k mAh</div>
           <div class="laptop-img-wrapper">
-            <img src="images/80,000mah.png" alt="SH Plus 80,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(501)">Add to cart</button>
+            <img src="images/80,000mah.png" alt="SH Plus 80,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">  
           </div>
           <div class="laptop-info">
             <div class="brand-name">SH PLUS</div>
@@ -117,7 +118,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">50k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/Transparent50kpb.png" alt="Transparent 50,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(502)">Add to cart</button>
+                       
           </div>
           <div class="laptop-info">
             <div class="brand-name">GENERIC</div>
@@ -135,7 +136,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">40k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/SHplus40kmah.png" alt="SH Plus 40,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(503)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">SH PLUS</div>
@@ -153,7 +154,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">30k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/oraimo30k.png" alt="Oraimo 30,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(504)">Add to cart</button>
+                     
           </div>
           <div class="laptop-info">
             <div class="brand-name">ORAIMO</div>
@@ -171,7 +172,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">27k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/oraimo27k.png" alt="Oraimo 27,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(505)">Add to cart</button>
+                             
           </div>
           <div class="laptop-info">
             <div class="brand-name">ORAIMO</div>
@@ -189,7 +190,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">20k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/oraimo20k.png" alt="Oraimo 20,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(506)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">ORAIMO</div>
@@ -207,7 +208,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">20k mAh</div>
           <div class="laptop-img-wrapper">
             <img src="images/itel20k.png" alt="ITEL 20,000mAh Power Bank" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609592807963-4235e2637a77?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(507)">Add to cart</button>
+                           
           </div>
           <div class="laptop-info">
             <div class="brand-name">ITEL</div>
@@ -239,7 +240,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">61W Apple</div>
           <div class="laptop-img-wrapper">
             <img src="images/macbook61w.png" alt="MacBook Pro Adapter 61W" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(508)">Add to cart</button>
+                             
           </div>
           <div class="laptop-info">
             <div class="brand-name">APPLE</div>
@@ -257,7 +258,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">45W Combo</div>
           <div class="laptop-img-wrapper">
             <img src="images/45wadapter.png" alt="45W Adapter + Cable" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(509)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">GENERIC / SAMSUNG</div>
@@ -275,7 +276,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">Baseus</div>
           <div class="laptop-img-wrapper">
             <img src="images/Baseusadapter.png" alt="Baseus Fast Charger Adapter" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(510)">Add to cart</button>
+                              
           </div>
           <div class="laptop-info">
             <div class="brand-name">BASEUS</div>
@@ -293,7 +294,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">iWatch</div>
           <div class="laptop-img-wrapper">
             <img src="images/iwatchcharger.png" alt="Apple Watch USB Charger" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(511)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">APPLE</div>
@@ -311,7 +312,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">25W</div>
           <div class="laptop-img-wrapper">
             <img src="images/Apple25wadapter.png" alt="25W Power Adapter" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(512)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">SAMSUNG / UNIVERSAL</div>
@@ -329,7 +330,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">20W UK 3-Pin</div>
           <div class="laptop-img-wrapper">
             <img src="images/Apple20wadapter.png" alt="20W 3-Pin Adapter" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(513)">Add to cart</button>
+                         
           </div>
           <div class="laptop-info">
             <div class="brand-name">APPLE / UNIVERSAL</div>
@@ -347,7 +348,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">20W EU 2-Pin</div>
           <div class="laptop-img-wrapper">
             <img src="images/Apple20wadapter2pin.png" alt="20W 2-Pin Adapter" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(514)">Add to cart</button>
+                          
           </div>
           <div class="laptop-info">
             <div class="brand-name">APPLE / UNIVERSAL</div>
@@ -365,7 +366,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">Samsung</div>
           <div class="laptop-img-wrapper">
             <img src="images/Samsung_fast_charger.png" alt="Samsung Type C Charger" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(515)">Add to cart</button>
+                         
           </div>
           <div class="laptop-info">
             <div class="brand-name">SAMSUNG</div>
@@ -397,7 +398,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">Auto Kit</div>
           <div class="laptop-img-wrapper">
             <img src="images/dual_car_charger.png" alt="Car Charger + Cable Kit" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(516)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">UNIVERSAL</div>
@@ -415,7 +416,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">Lightning</div>
           <div class="laptop-img-wrapper">
             <img src="images/typec_to_lightening.png" alt="Type C to Lightning Cable" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(517)">Add to cart</button>
+                          
           </div>
           <div class="laptop-info">
             <div class="brand-name">APPLE / COMPATIBLE</div>
@@ -433,7 +434,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">Type-C PD</div>
           <div class="laptop-img-wrapper">
             <img src="images/typec_cable.png" alt="Type C to Type C Cable" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(518)">Add to cart</button>
+                            
           </div>
           <div class="laptop-info">
             <div class="brand-name">UNIVERSAL</div>
@@ -451,7 +452,7 @@
           <div class="save-badge" style="background-color: #0f2b48;">USB to C</div>
           <div class="laptop-img-wrapper">
             <img src="images/TypeA_to_C.png" alt="USB to Type C Cable" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80';">
-            <button class="hover-add-cart-btn" onclick="addToCart(519)">Add to cart</button>
+                           
           </div>
           <div class="laptop-info">
             <div class="brand-name">UNIVERSAL</div>

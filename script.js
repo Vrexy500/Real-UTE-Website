@@ -193,7 +193,7 @@ function renderProducts(items) {
       <h3 class="product-title">${product.title}</h3>
       <div class="product-bottom">
         <span class="price-tag">${formatNaira(product.price)}</span>
-        <button class="add-btn" onclick="addToCart(${product.id})">Add to Cart</button>
+             class="add-btn"       (${product.id})      
       </div>
     `;
     grid.appendChild(card);
@@ -250,7 +250,7 @@ function updateCartUI() {
         <div class="cart-item-title">${item.title}</div>
         <div class="cart-item-price">${formatNaira(item.price)} x ${item.qty}</div>
       </div>
-      <button class="remove-item" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
+           class="remove-item" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
     `;
     cartContainer.appendChild(itemElem);
   });
@@ -293,5 +293,30 @@ function closeCart() {
     if (clickedElement) {
       clickedElement.classList.add('active');
     }
-  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find all product cards or container elements that hold the item info
+    // Adjust selector based on your HTML structure (e.g., .product-card, .card, etc.)
+    const productCards = document.querySelectorAll(".product-card, .card");
+
+    productCards.forEach(card => {
+      // Look for the product name and the old "Add to cart" button
+      const titleElement = card.querySelector("h3, h4, .product-title, .title");
+      const addToCartBtn = card.querySelector(".add-to-cart, button");
+
+      if (titleElement && addToCartBtn) {
+        const productName = titleElement.textContent.trim();
+
+        // Create the new Enquire anchor link
+        const enquireLink = document.createElement("a");
+        enquireLink.href = `contact.html?product=${encodeURIComponent(productName)}`;
+        enquireLink.className = "enquire-btn";
+        enquireLink.innerHTML = `<i class="fab fa-whatsapp"></i> Enquire`;
+
+        // Replace the old button with the new Enquire button
+        addToCartBtn.replaceWith(enquireLink);
+      }
+    });
+  });
+  
 </script>

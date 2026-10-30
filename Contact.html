@@ -189,10 +189,7 @@
         <a href="https://www.instagram.com/unstoppable_techh?dlrf=MTU1bzlmZHRybW9jNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@unstoppabletech?_r=1&_t=ZS-9Adv2xZmcsM" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://wa.me/message/HZ3OK4SEQXMGN1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <button class="cart-trigger" id="openCartBtn" aria-label="View Cart">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="cart-count" id="cartBadgeCount">0</span>
-        </button>
+           
       </div>
     </div>
     <nav class="nav-bar">
@@ -225,12 +222,6 @@
     <input type="text" id="contactName" class="form-control" placeholder="Name" required>
   </div>
   <div>
-    <input type="email" id="contactEmail" class="form-control" placeholder="Email" required>
-  </div>
-  <div>
-    <input type="tel" id="contactPhone" class="form-control" placeholder="Phone number" required>
-  </div>
-  <div>
     <select id="contactSubject" class="form-control" required>
       <option value="" disabled selected>Select Subject</option>
       <option value="Laptop Inquiry / Order">Laptop Inquiry / Order</option>
@@ -246,7 +237,8 @@
   </div>
 
   <!-- Submit Button -->
-  <button type="submit" class="send-whatsapp-btn">
+   <button
+       type="submit" class="send-whatsapp-btn">
     <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Send Message
   </button>
 
@@ -370,37 +362,33 @@
   <!-- Script to capture form inputs and redirect to WhatsApp -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const contactForm = document.getElementById("whatsappContactForm");
+    const contactForm = document.getElementById("whatsappContactForm");
 
-      if (contactForm) {
+    if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
-          e.preventDefault(); // Stop standard form submission
+            e.preventDefault(); // Stop standard form submission
 
-          const name = document.getElementById("contactName").value.trim();
-          const email = document.getElementById("contactEmail").value.trim();
-          const phone = document.getElementById("contactPhone").value.trim();
-          const subject = document.getElementById("contactSubject").value;
-          const message = document.getElementById("contactMessage").value.trim();
+            const name = document.getElementById("clientName").value.trim();
+            const subject = document.getElementById("contactSubject").value;
+            const message = document.getElementById("contactMessage").value.trim();
 
-          // Build neatly formatted message for WhatsApp
-          let text = `Hello Unstoppable Tech! 👋\n\n`;
-          text += `*New Contact Message from Website*\n`;
-          text += `-----------------------------------\n`;
-          text += `👤 *Name:* ${name}\n`;
-          text += `📧 *Email:* ${email}\n`;
-          text += `📱 *Phone:* ${phone}\n`;
-          text += `📌 *Subject:* ${subject}\n\n`;
-          text += `💬 *Message:* \n${message}`;
+            // Build neatly formatted message for WhatsApp
+            let text = 'Hello Unstoppable Tech!\n\n';
+            text += 'New Contact Message from Website\n';
+            text += '------------------------------------\n';
+            text += `*Name:* ${name}\n`;
+            text += `*Subject:* ${subject}\n\n`;
+            text += `*Message:* \n${message}`;
 
-          const encodedMessage = encodeURIComponent(text);
+            const encodedMessage = encodeURIComponent(text);
+            
+            // Redirect to your primary WhatsApp line
+            const whatsappURL = `https://wa.me/2349138337421?text=${encodedMessage}`;
 
-          // Redirect to your primary WhatsApp line
-          const whatsappURL = `https://wa.me/2349138337421?text=${encodedMessage}`;
-
-          window.open(whatsappURL, "_blank");
+            window.open(whatsappURL, "_blank");
         });
-      }
-    });
+    }
+});
   </script>
 
 </body>
