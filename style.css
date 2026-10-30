@@ -1237,9 +1237,9 @@ html, body {
 }
 
 /* Mobile Screen Logo Size */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .brand-logo {
-    max-height: 60px !important; /* Larger on mobile phones too */
+    max-height: 80px !important; /* Larger on mobile phones too */
   }
 }
 /* Ensure the sticky header container locks to the top */
