@@ -1196,3 +1196,29 @@ html, body {
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  /* Make the sub-category bar horizontal and swipeable */
+  .category-subtypes {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    gap: 10px !important;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  /* Hide scrollbar for a clean look */
+  .category-subtypes::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Prevent text/items from squishing */
+  .category-subtypes .subtype-link {
+    flex-shrink: 0 !important;
+    padding: 6px 12px !important;
+    font-size: 0.85rem !important;
+  }
+}
