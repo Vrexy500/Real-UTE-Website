@@ -1107,3 +1107,92 @@ body {
     padding: 6px 10px;
   }
 }
+
+/* ===================================================
+   MOBILE RESPONSIVE FIXES (Screens under 768px)
+   =================================================== */
+
+/* Ensure full layout scales to phone screen */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+
+  /* 1. Slim Red Announcement Bar */
+  .top-announcement-bar {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .top-announcement-bar i {
+    font-size: 0.8rem;
+  }
+
+  /* 2. Compact Top Header */
+  .top-header {
+    padding: 8px 15px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand-logo {
+    max-height: 32px !important; /* Keep logo compact */
+    width: auto;
+  }
+
+  .social-links {
+    gap: 12px !important;
+  }
+
+  .social-links a, .cart-trigger {
+    font-size: 1.1rem !important;
+  }
+
+  /* 3. Horizontal Swipeable Nav Bar (No awkward wrapping!) */
+  .nav-bar {
+    padding: 6px 10px !important;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forces items onto ONE row */
+    overflow-x: auto !important; /* Enables smooth horizontal swipe */
+    white-space: nowrap !important;
+    gap: 15px !important;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar for clean UI */
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-item {
+    font-size: 0.85rem !important;
+    padding: 4px 8px !important;
+    flex-shrink: 0; /* Prevents text from shrinking */
+  }
+
+  /* 4. Product Card Scaling for Mobile */
+  .product-grid, .grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* Shows 2 clean items per row */
+    gap: 12px !important;
+    padding: 10px !important;
+  }
+
+  .filter-bar, .sort-by {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
